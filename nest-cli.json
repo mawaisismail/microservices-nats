@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/microservices-two/src",
+  "monorepo": true,
+  "root": "apps/microservices-two",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/microservices-two/tsconfig.app.json"
+  },
+  "projects": {
+    "microservices-two": {
+      "type": "application",
+      "root": "apps/microservices-two",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservices-two/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservices-two/tsconfig.app.json"
+      }
+    },
+    "project-two": {
+      "type": "application",
+      "root": "apps/project-two",
+      "entryFile": "main",
+      "sourceRoot": "apps/project-two/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/project-two/tsconfig.app.json"
+      }
+    },
+    "event-manager": {
+      "type": "application",
+      "root": "apps/event-manager",
+      "entryFile": "main",
+      "sourceRoot": "apps/event-manager/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/event-manager/tsconfig.app.json"
+      }
+    }
+  }
+}
